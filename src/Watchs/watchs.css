@@ -1,0 +1,122 @@
+.watchs {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+  border: 1px solid white;
+  padding: 30px;
+}
+
+.watch-form {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: flex-end;
+}
+.watch-form label {
+  text-align: left;
+}
+.watch-form input {
+  outline: none;
+  border: 2px solid black;
+  padding: 10px;
+}
+.watch-form input:focus {
+  border: 2px solid yellow;
+}
+.watch-form button {
+  outline: none;
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+.watch-form button:hover {
+  border: 2px solid yellow;
+}
+.watchs-box {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.watch-container {
+  position: relative;
+  padding: 20px;
+}
+.watch-title {
+  font-weight: 700;
+}
+.watch-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  color: red;
+  font-size: 30px;
+  line-height: 0.75;
+  border-radius: 50%;
+  background-color: white;
+  rotate: 45deg;
+  text-align: center;
+  top: 45px;
+  right: 15px;
+  z-index: 10;
+}
+.watch-img {
+  margin-top: 20px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 55%;
+  background-image: url(../assets/watch2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  z-index: 0;
+}
+.arrow-hour,
+.arrow-minute,
+.arrow-second {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* border: 1px solid #aaa; */
+  z-index: 1;
+}
+.arrow-hour::before,
+.arrow-minute::before,
+.arrow-second::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  left: calc(50% - 2px);
+  background-color: black;
+  z-index: 2;
+}
+.arrow-hour::before {
+  height: 45px;
+  top: 30px;
+}
+.arrow-minute::before {
+  height: 70px;
+  top: 5px;
+}
+.arrow-second::before {
+  width: 2px;
+  left: calc(50% - 1px);
+  height: 65px;
+  top: 10px;
+}
+.arrow-hour {
+  rotate: 0deg;
+
+}
+.arrow-minute {
+  rotate: 30deg;
+}
+.arrow-second {
+  rotate: 0deg;
+}
