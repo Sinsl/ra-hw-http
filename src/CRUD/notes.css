@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.notes {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  padding: 30px;
+  margin-top: 30px;
+}
+.notes-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.notes-title {
+  font-size: 40px;
+}
+.icon-sync {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  color: green;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  font-size: 35px;
+  text-align: center;
+}
+.icon-sync:hover {
+  border: 2px solid green;
+}
+.notes-box {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+
+}
+.note {
+  width: 280px;
+  padding: 20px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: 2px solid black;
+}
+.icon-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -15px;
+  right: -15px;
+  border: 2px solid black;
+  color: red;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  font-size: 35px;
+  text-align: center;
+}
+.icon-close:hover {
+  border: 2px solid red;
+}
+.notes-form {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 40px;
+  text-align: left;
+}
+.notes-form textarea {
+  outline: none;
+  width: 100%;
+  resize: none;
+  padding: 10px;background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+.icon-arrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+  right: 10px;
+  border: 2px solid black;
+  color: black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  font-size: 35px;
+  text-align: center;
+}
+.icon-arrow:hover {
+  border: 2px solid green;
+  color: green;
+}

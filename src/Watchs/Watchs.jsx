@@ -9,7 +9,6 @@ export const Watchs = () => {
   let [watchArr, setWatchArr] = useState(dataWatch);
 
   const onCloseHandler = (idx) => {
-    console.log(idx)
     setWatchArr(arr => arr.filter((el, index) => index !== idx));
   }
 

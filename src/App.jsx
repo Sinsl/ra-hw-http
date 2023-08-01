@@ -1,6 +1,7 @@
 import './App.css'
 import Task from './tasks/Task';
 import { Watchs } from './Watchs/Watchs';
+import { Notes } from './CRUD/Notes';
 
 
 function App() {
@@ -10,8 +11,7 @@ function App() {
         <h1>Домашнее задание к теме &quot;Жизненный цикл и работа с HTTP&quot;</h1>
       </header>
       <Task title={"Задача 1: Мировые часы"} component={<Watchs />}/>
-      {/* <Task title={"Задача 2"} component={<Listing  items={etsy}/>}/> */}
-      {/* <Task title={"Задача 3"} component={<Chat />}/> */}
+      <Task title={"Задача 2: CRUD"} component={<Notes />}/>
     </div>
   )
 }
