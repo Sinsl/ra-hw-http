@@ -2,5 +2,5 @@
 
 [Сервер](https://github.com/Sinsl/ra-hw-http-backend)
 
-[Pages](https://github.com/Sinsl/ra-hw-http-backend)
+[Pages]( https://sinsl.github.io/ra-hw-http)
 
