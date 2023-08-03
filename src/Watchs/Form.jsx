@@ -12,7 +12,9 @@ export const Form = ({submitHandler}) => {
   }
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    submitHandler({title: city, zone});
+    const txtCity = city === '' ? 'Без названия' : city;
+    const txtZone = zone === '' ? '0' : zone;
+    submitHandler({title: txtCity, zone: txtZone});
     clear();
   }
 

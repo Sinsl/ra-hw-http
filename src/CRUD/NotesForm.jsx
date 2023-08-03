@@ -5,7 +5,8 @@ export const NotesForm = ({onSubmit}) => {
   const [text, setText] = useState('');
 
   const onSubmitHandler = () => {
-    onSubmit(text);
+    const value = text === '' ? 'Без текста' : text;
+    onSubmit(value);
     setText('');
   }
 

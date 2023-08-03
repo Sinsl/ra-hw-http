@@ -3,7 +3,6 @@ import { WatchImage } from './WatchImage';
 
 export const WatchsBox = ({dataWatch, onClose}) => {
 
-
   return (
     <div className="watchs-box">
       {dataWatch.map((elem, idx) => (

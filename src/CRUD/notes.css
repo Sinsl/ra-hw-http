@@ -96,3 +96,7 @@
   border: 2px solid green;
   color: green;
 }
+.server {
+  color: rgb(133, 225, 133);
+  font-size: 30px;
+}

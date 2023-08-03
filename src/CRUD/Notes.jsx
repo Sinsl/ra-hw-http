@@ -8,16 +8,17 @@ import './notes.css';
 export const Notes = () => {
 
   let [notesList, setNotesList] = useState([]);
-  const apiUrl = import.meta.env.VITE_URL_SERV;
+  let [isLoad, setLoad] = useState(false);
+  const apiUrl = import.meta.env.VITE_URL;
 
   const request = async (options) => {
-      const response = await fetch(apiUrl + options.url, {
+    const response = await fetch(apiUrl + options.url, {
         method: options.method,
         headers: {
           'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(options.data)
-      });  
+    });  
       
       if(options.method !== 'GET') {
         request({ url: '/notes', method: 'GET' });
@@ -29,7 +30,9 @@ export const Notes = () => {
 
   useEffect(() => {
     (async () => {
-      await request({ url: '/notes', method: 'GET' });
+      await fetch(apiUrl + '/ping');
+      setLoad(true);
+      await request({ url: '/notes', method: 'GET' });      
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
@@ -54,7 +57,8 @@ export const Notes = () => {
         <div className="notes-title">Notes</div>
         <div className="material-icons icon-sync" onClick={updateHandler}>sync</div>
       </div>
-      <NotesBox data={notesList} onDelete={deleteHandler}/>
+      {!isLoad && <div className="server">Сервер на Render запускается. Минуточку...</div>}
+      {isLoad && <NotesBox data={notesList} onDelete={deleteHandler}/>}
       <NotesForm onSubmit={onSubmitHandler}/>
     </div>    
   );

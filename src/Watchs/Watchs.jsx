@@ -14,6 +14,7 @@ export const Watchs = () => {
 
   const onSubmitHandler = (value) => {
     setWatchArr(arr => [...arr, value]);
+
   }
 
   return (
